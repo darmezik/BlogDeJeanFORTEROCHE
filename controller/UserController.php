@@ -1,15 +1,15 @@
 <?php
-require_once('model/Model.php');
+require_once('model/PostManager.php');
 class UserController
 {
     public function printHome()
     {
-        require('view/viewAccueil.php');
+        require('view/viewHome.php');
     }
 
-    public function printRoman()
+    public function printBook()
     {
-        require('view/viewRoman.php');
+        require('view/viewBook.php');
     }
 
     public function printBibliographie()

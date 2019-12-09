@@ -14,9 +14,9 @@ try
         {
             $UserController->printHome();
         }
-        elseif($_GET['action'] == 'roman')
+        elseif($_GET['action'] == 'book')
         {
-            $UserController->printRoman();
+            $UserController->printBook();
         }
         elseif($_GET['action'] == 'bibliographie')
         {
