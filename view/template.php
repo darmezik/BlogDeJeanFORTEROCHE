@@ -19,7 +19,6 @@
                     <ul>
                         <li><a id="defaultLeft" href="index.php?action=home">Accueil</a></li>
                         <li><a href="index.php?action=book">Livre</a></li>
-                        <li><a href="index.php?action=bibliographie">Bibliographie</a></li>
                         <li><a href="index.php?action=contact">Contact</a></li>
                         <li><a id="defaultRight" href="#">Connexion</a></li>
                     </ul>
@@ -39,7 +38,6 @@
                 <ul>
                     <li><a href="index.php?action=home">Accueil</a></li>
                     <li><a href="index.php?action=book">Livre</a></li>
-                    <li><a href="index.php?action=bibliographie">Bibliographie</a></li>
                     <li><a href="index.php?action=contact">Contact</a></li>
                     <li><a href="#">Connexion</a></li>
                 </ul>

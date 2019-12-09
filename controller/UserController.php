@@ -12,11 +12,6 @@ class UserController
         require('view/viewBook.php');
     }
 
-    public function printBibliographie()
-    {
-        require('view/viewBibliographie.php');
-    }
-
     public function printContact()
     {
         require('view/viewContact.php');

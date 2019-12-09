@@ -18,10 +18,6 @@ try
         {
             $UserController->printBook();
         }
-        elseif($_GET['action'] == 'bibliographie')
-        {
-            $UserController->printBibliographie();
-        }
         elseif($_GET['action'] == 'contact')
         {
             $UserController->printContact();

@@ -48,6 +48,7 @@ header div h1
     margin-top: 10px;
     text-align: center;
     color: #011C40;
+    text-shadow: 2px 2px 2px #011C40;
     opacity: 0.8;
 }
 
@@ -62,13 +63,11 @@ header nav ul
 
 header nav ul li a
 {
-    padding: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: 3px;
-    margin-right: 3px;
+    padding: 5px 25px 5px 25px;
+    margin-left: 9px;
+    margin-right: 9px;
     background-color: #C7D2D9;
-    border-radius: 5%;
+    border-radius: 10%;
     border: 1px solid #E4EBF2;
     box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
@@ -82,14 +81,21 @@ header nav ul li a:hover
     text-decoration: none;
 }
 
+header nav ul li a:active
+{
+    background-color: rgba(199, 210, 217, 0.2);
+    box-shadow: 5px 5px 5px #C7D2D9;
+    transform: translateY(4px);
+}
+
 #defaultLeft
 {
-    border-radius: 0% 0% 0% 30%;
+    border-radius: 10% 10% 10% 25%;
 }
 
 #defaultRight
 {
-    border-radius: 0% 0% 30% 0%;
+    border-radius: 10% 10% 25% 10%;
 }
                     /* Pied de page (footer) */
 footer
@@ -111,12 +117,16 @@ footer
     width: 3%;
 }
 
+footer nav
+{
+    margin: auto;
+    width: 253.4px;
+}
+
 footer nav ul
 {
     display: flex;
     list-style-type: none;
-    width: 357px;
-    margin: auto;
     padding: 0;
 }
 
@@ -181,9 +191,7 @@ footer p
 
 #headerHome a
 {
-    padding: 10px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 10px 40px 10px 40px;
     margin-left: 5px;
     margin-right: 5px;
     background-color: #C7D2D9;
@@ -200,6 +208,13 @@ footer p
     color: #011C40;
     box-shadow: 4px 4px 4px #C7D2D9;
     text-decoration: none;
+}
+
+#headerHome a:active
+{
+    background-color: rgba(199, 210, 217, 0.4);
+    box-shadow: 7px 7px 7px #C7D2D9;
+    transform: translateY(4px);
 }
 
 #fontPresentation
@@ -246,3 +261,69 @@ footer p
     margin-left: 50px;
     border-radius: 20%;
 }
+
+.fontChapitre, #contact
+{
+    background-color: rgba(61, 144, 217, 0.6);
+}
+                  /* Page Contact */
+#formContact h2
+{
+    font-size: 2.5em;
+    color: #363844;
+    text-shadow: 8px 8px 8px #363844;
+}
+
+#formContact
+{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+#name, #email, #subject
+{
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px;
+    width: 450px;
+    border-radius: 5%;
+}
+
+#formContact form textarea
+{
+    resize: none;
+    margin-top: 30px;
+    padding: 15px;
+    width: 850px;
+    height: 250px;
+    border-radius: 2%;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+}
+
+#formContact form textarea:focus, #formContact form input:focus
+{
+    background: rgba(255, 255, 255, 0.8);
+    outline: none;
+    border: none;
+}
+
+.submit
+{
+    background-color: #C7D2D9;
+    padding: 15px 50px;
+    border-radius: 5%;
+    border: 1px solid #E4EBF2;
+    box-shadow: 5px 5px 5px #3D90D9;
+    color: #3D90D9;
+}
+
+.submit:hover
+{
+    color: #011C40;
+    box-shadow: 2px 2px 2px #C7D2D9;
+    text-decoration: none;
+}
+
