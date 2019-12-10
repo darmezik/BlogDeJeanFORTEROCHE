@@ -5,10 +5,12 @@
     <div>
         <h2>Bienvenue sur mon blog et bonne lecture !</h2>
         <h3>Venez découvrir mon nouveau roman en ligne : Billet simple pour l'Alaska</h3>
-        <a href="#">Derniers épsiodes</a>
+        <a href="#fontChapitreHome">Derniers épsiodes</a>
         <a href="#fontPresentation">En savoir plus</a>
     </div>
 </section>
+<div class="separat1">
+</div>
 <section id="fontPresentation">
     <div class="presentation">
         <p>Je m'appelle Jean Forteroche, auteur de Roman mon métier, ma passion.<br /> 
@@ -19,13 +21,17 @@
         <img src="public/images/photoJean.jpg" alt="Jean Forteroche" />
     </div>
 </section>
-<section class="fontChapitre">
+<div class="separat2">
+</div>
+<div class="separat1">
+</div>
+<section id="fontChapitreHome">
     <?php
         while($data = $post->fetch())
         {
     ?>
-        <h4>Le dernier chapitre de mon livre : <?= $data['title'] ?></h4>
         <article>
+            <h4>Le dernier chapitre de mon livre : <?= $data['title'] ?></h4>
             <p><?= $data['content'] ?></p>
         </article>
     <?php
@@ -33,5 +39,7 @@
         $post->closeCursor();
     ?>
 </section>
+<div class="separat2">
+</div>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>
