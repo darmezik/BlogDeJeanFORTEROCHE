@@ -16,6 +16,12 @@ class UserController
         require('view/viewBook.php');
     }
 
+    public function printComments()
+    {
+        $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+        
+    }
+
     public function printContact()
     {
         require('view/viewContact.php');

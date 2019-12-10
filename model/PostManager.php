@@ -16,4 +16,13 @@ class PostManager extends Manager
         $req = $db->query('SELECT id, title, content FROM posts ORDER BY id DESC LIMIT 1');
         return $req;
     }
+
+    public function getPostId($postId)
+    {
+        $db = $this->dbConnect();
+        $req = $db->prepare('SELECT id, title, content FROM posts WHERE id = ?');
+        $req->execute(array($postId));
+        $post = $req->fetch();
+        return $post;
+    }
 }
