@@ -26,18 +26,10 @@
 <div class="separat1">
 </div>
 <section id="fontChapitreHome">
-    <?php
-        while($data = $post->fetch())
-        {
-    ?>
-        <article>
-            <h4>Le dernier chapitre de mon livre : <?= $data['title'] ?></h4>
-            <p><?= $data['content'] ?></p>
-        </article>
-    <?php
-        }
-        $post->closeCursor();
-    ?>
+    <article>
+        <h4>Le dernier chapitre de mon livre : <?= $post['title'] ?></h4>
+        <p><?= $post['content'] ?></p>
+    </article>
 </section>
 <div class="separat2">
 </div>
