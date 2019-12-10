@@ -20,6 +20,18 @@
     </div>
 </section>
 <section class="fontChapitre">
+    <?php
+        while($data = $post->fetch())
+        {
+    ?>
+        <h4>Le dernier chapitre de mon livre : <?= $data['title'] ?></h4>
+        <article>
+            <p><?= $data['content'] ?></p>
+        </article>
+    <?php
+        }
+        $post->closeCursor();
+    ?>
 </section>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

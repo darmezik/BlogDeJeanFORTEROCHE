@@ -42,7 +42,7 @@
                     <li><a href="#">Connexion</a></li>
                 </ul>
             </nav>
-            <p>© 2019 - Tout droits réservés / Site réalisé par Killian D.</p>
+            <p>© 2019 - Tout droits réservés / Site réalisé par Killian D. dans le cadre d'une formation OpenClassrooms</p>
         </footer>
     </body>
 </html>

@@ -40,7 +40,7 @@ header #auteur + div
     height: 137px;
     border-radius: 0% 0% 10% 10%;
     background: radial-gradient(ellipse, #C7D2D9, transparent);
-    box-shadow: 0px 5px #3D90D9;
+    box-shadow: 1px 5px 0px #3D90D9;
 }
 
 header div h1
@@ -146,6 +146,7 @@ footer nav ul li a:hover
 
 footer p
 {
+    text-align: center;
     font-size: 0.8em;
     width: 313px;
     margin-top: 1rem;
