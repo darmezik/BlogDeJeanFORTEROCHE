@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 10 déc. 2019 à 17:34
+-- Généré le :  mer. 11 déc. 2019 à 11:24
 -- Version du serveur :  10.4.8-MariaDB
 -- Version de PHP :  7.3.11
 
@@ -31,10 +31,20 @@ SET time_zone = "+00:00";
 CREATE TABLE `comments` (
   `id` int(11) NOT NULL,
   `postId` int(11) NOT NULL,
-  `author` varchar(255) NOT NULL,
+  `pseudo` varchar(255) NOT NULL,
   `comment` text NOT NULL,
-  `comment_date` datetime NOT NULL
+  `commentDate` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `comments`
+--
+
+INSERT INTO `comments` (`id`, `postId`, `pseudo`, `comment`, `commentDate`) VALUES
+(1, 1, 'kiki', 'test n°1 d\'un commentaire', '2019-12-11 08:25:35'),
+(2, 2, 'kiki73', 'test d\'un 2 ème commentaire', '2019-12-11 08:42:50'),
+(3, 2, 'kiki73', 'test d\'un 3ème commentaire', '2019-12-11 09:17:50'),
+(4, 1, 'kiki', '2ème test commentaire', '2019-12-11 11:14:05');
 
 -- --------------------------------------------------------
 
@@ -80,7 +90,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT pour la table `posts`
