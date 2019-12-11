@@ -18,6 +18,14 @@ try
         {
             $UserController->printBook();
         }
+        elseif($_GET['action'] == 'comments')
+        {
+            $UserController->printComments();
+        }
+        elseif($_GET['action'] == 'addComment')
+        {
+            $UserController->addComment();
+        }
         elseif($_GET['action'] == 'contact')
         {
             $UserController->printContact();

@@ -25,7 +25,7 @@
 </div>
 <div class="separat1">
 </div>
-<section id="fontChapitreHome">
+<section class="fontChapitre">
     <article>
         <h4>Le dernier chapitre de mon livre : <?= $post['title'] ?></h4>
         <p><?= $post['content'] ?></p>

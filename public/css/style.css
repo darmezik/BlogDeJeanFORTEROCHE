@@ -2,6 +2,11 @@ body
 {
     margin: 0;
 }
+
+p
+{
+    color: #011C40;
+}
                     /* En tête (header) */
 header
 {
@@ -270,64 +275,49 @@ footer p
     height: 15px;
     background-image: linear-gradient(rgba(61, 144, 217, 0.6), rgba(61, 144, 217, 0.45));
 }
-
-                /* Page Accueil(dernier chapitre) */
-#fontChapitreHome
-{
-    background-color: rgba(61, 144, 217, 0.6);
-    text-align: center;
-    padding-bottom: 30px;
-}
-
-#fontChapitreHome h4
-{
-    color: #363844;
-    text-shadow: 10px 10px 15px #363844;
-    margin-bottom: 30px;
-}
-
-#fontChapitreHome p
-{
-    background-color: rgba(61, 144, 217, 0.2);
-    box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
-    margin: auto;
-    line-height: 30px;
-    padding: 70px;
-    max-width: 1400px;
-}
                 /* --- Page Livre --- */
-#fontChapitre
+.fontChapitre
 {
     background-color: rgba(61, 144, 217, 0.6);
     text-align: center;
 }
 
-#fontChapitre h2, #fontChapitre h3
+.fontChapitre h2, .fontChapitre h3, .fontChapitre h4, .fontChapitre h5
 {
     color: #363844;
     text-shadow: 4px 4px 15px #363844;
 }
 
-#fontChapitre h3
+.fontChapitre h3
 {
     margin-top: 30px;
 }
 
-#fontChapitre article
+.fontChapitre article
 {
     padding-bottom: 30px;
 }
 
-#fontChapitre article p
+.fontChapitre article p
 {
     background-color: rgba(61, 144, 217, 0.2);
     box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
     margin: auto;
-    line-height: 30px;
+    line-height: 35px;
     padding: 40px 70px 70px 70px;
     max-width: 1400px;
 }
+                /* --- Page Livre(comment) --- */
+.comm
+{
+    margin: 0;
+}
 
+section article form
+{
+    margin-top: 20px;
+    color: #011C40;
+}
                 /* --- Page Contact --- */
 #contact
 {

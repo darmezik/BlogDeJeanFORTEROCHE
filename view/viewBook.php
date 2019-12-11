@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
 <div class="separat1">
 </div>
-<section id="fontChapitre">
+<section class="fontChapitre">
     <h2>Mon livre par chapitre</h2>
     <p>Vous trouverez ici tous les chapitres de mon livre</p>
     <?php 
