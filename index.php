@@ -30,6 +30,18 @@ try
         {
             $UserController->printContact();
         }
+        elseif($_GET['action'] == 'connect')
+        {
+            $UserController->printDashboard();
+        }
+        elseif($_GET['action'] == 'commentsUp')
+        {
+            $UserController->printCommentsUp();
+        }
+        elseif($_GET['action'] == 'deleteComment')
+        {
+            $UserController->deleteComment();
+        }
     }
     else
     {

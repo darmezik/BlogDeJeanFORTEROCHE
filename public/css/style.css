@@ -276,29 +276,29 @@ footer p
     background-image: linear-gradient(rgba(61, 144, 217, 0.6), rgba(61, 144, 217, 0.45));
 }
                 /* --- Page Livre --- */
-.fontChapitre
+.fontPage
 {
     background-color: rgba(61, 144, 217, 0.6);
     text-align: center;
 }
 
-.fontChapitre h2, .fontChapitre h3, .fontChapitre h4, .fontChapitre h5
+.fontPage h2, .fontPage h3, .fontPage h4, .fontPage h5
 {
     color: #363844;
     text-shadow: 4px 4px 15px #363844;
 }
 
-.fontChapitre h3
+.fontPage h3
 {
     margin-top: 30px;
 }
 
-.fontChapitre article
+.fontPage article
 {
     padding-bottom: 30px;
 }
 
-.fontChapitre article p
+.fontPage article p
 {
     background-color: rgba(61, 144, 217, 0.2);
     box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
@@ -315,15 +315,16 @@ footer p
 
 section article form
 {
-    margin-top: 20px;
+    padding-top: 20px;
     color: #011C40;
 }
-                /* --- Page Contact --- */
-#contact
-{
-    background-color: rgba(61, 144, 217, 0.6);
-}
 
+#comment
+{
+    padding-bottom: 80px;
+    padding-right: 80px;
+}
+                /* --- Page Contact --- */
 #formContact h2
 {
     font-size: 2.5em;
@@ -387,6 +388,7 @@ section article form
 
 .submit:active
 {
+    outline: none;
     border: none;
     box-shadow: 3px 3px 5px #011C40 inset;
 }

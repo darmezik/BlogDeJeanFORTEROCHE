@@ -14,8 +14,16 @@ class CommentManager extends Manager
     public function getComments($postId)
     {
         $db = $this->dbConnect();
-        $comments = $db->prepare('SELECT pseudo, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr FROM comments WHERE postId = ? ORDER BY commentDate DESC');
+        $comments = $db->prepare('SELECT id, postId, pseudo, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr FROM comments WHERE postId = ? ORDER BY commentDate DESC');
         $comments->execute(array($postId));
         return $comments;
+    }
+
+    public function deleteComment($id)
+    {
+        $db = $this->dbConnect();
+        $reponse = $db->prepare('DELETE FROM comments WHERE id = ?');
+        $rep = $reponse->execute(array($id));
+        return $rep;
     }
 }

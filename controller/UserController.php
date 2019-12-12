@@ -26,6 +26,36 @@ class UserController
         require('view/viewComments.php');
     }
 
+    public function printDashboard()
+    {
+        $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+        $posts = $postManager->getPosts();
+        require('view/viewDashboard.php');
+    }
+
+    public function printCommentsUp()
+    {
+        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+        $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+        $comments = $commentManager->getComments($_GET['id']);
+        $post = $postManager->getPostId($_GET['id']);
+        require('view/viewCommentsUp.php');
+    }
+
+    public function deleteComment()
+    {
+        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+        $reponse = $commentManager->deleteComment($_GET['id']);
+        if($rep === false)
+        {
+            throw new Exception('Erreur de suppression du commentaire !');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function addComment()
     {
         if(isset($_GET['id']) && $_GET['id'] > 0)

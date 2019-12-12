@@ -1,0 +1,23 @@
+<?php $title = 'Gérer les commentaires'; ?>
+<?php ob_start(); ?>
+<div class="separat1">
+</div>
+<section class="fontPage">
+    <article>
+        <h2>Commentaires du <?= $post['title'] ?></h2>
+        <?php
+            while ($comment = $comments->fetch())
+            {
+        ?>
+                <h5><?= htmlspecialchars($comment['pseudo']) ?>  le <?= $comment['commentDateFr'] ?> :</h5>
+                <a href="index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>">Supprimer</a>
+                <p><?= htmlspecialchars($comment['comment']) ?></p>
+        <?php
+            }
+        ?>
+    </article>
+</section>
+<div class="separat2">
+</div>
+<?php $content = ob_get_clean(); ?>
+<?php require('template.php'); ?>

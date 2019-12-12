@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mer. 11 déc. 2019 à 11:24
+-- Généré le :  jeu. 12 déc. 2019 à 12:03
 -- Version du serveur :  10.4.8-MariaDB
 -- Version de PHP :  7.3.11
 
@@ -41,10 +41,21 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `postId`, `pseudo`, `comment`, `commentDate`) VALUES
-(1, 1, 'kiki', 'test n°1 d\'un commentaire', '2019-12-11 08:25:35'),
 (2, 2, 'kiki73', 'test d\'un 2 ème commentaire', '2019-12-11 08:42:50'),
-(3, 2, 'kiki73', 'test d\'un 3ème commentaire', '2019-12-11 09:17:50'),
-(4, 1, 'kiki', '2ème test commentaire', '2019-12-11 11:14:05');
+(26, 1, 'kiki', 'commentaire 2', '2019-12-12 12:02:40'),
+(27, 1, 'kiki', 'salut', '2019-12-12 12:02:46'),
+(28, 1, 'kiki', 'commentaire 3', '2019-12-12 12:02:50');
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `members`
+--
+
+CREATE TABLE `members` (
+  `pseudo` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -90,7 +101,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT pour la table `posts`

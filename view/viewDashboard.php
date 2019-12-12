@@ -1,10 +1,9 @@
-<?php $title = 'Livre de Jean FORTEROCHE'; ?>
+<?php $title = 'Tableau de bord'; ?>
 <?php ob_start(); ?>
 <div class="separat1">
 </div>
 <section class="fontPage">
-    <h2>Mon livre par chapitre</h2>
-    <p>Vous trouverez ici tous les chapitres de mon livre</p>
+    <h2>Mes Chapitres</h2>
     <?php 
         while ($data = $posts->fetch())
         {
@@ -12,7 +11,7 @@
         <article>
             <h3><?= $data['title'] ?></h3>
             <p><?= $data['content'] ?></p>
-            <a href="index.php?action=comments&amp;id=<?= $data['id'] ?>">Voir ou écrire un commentaire</a>
+            <a href="index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
         </article>
     <?php
         }

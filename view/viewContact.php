@@ -1,6 +1,8 @@
 <?php $title = 'Contactez Jean FORTEROCHE'; ?>
 <?php ob_start(); ?>
-<section id="contact">
+<div class="separat1">
+</div>
+<section class="fontPage">
     <div id="formContact">
         <h2>Contactez-moi</h2>
         <form method="post" action="">
@@ -25,5 +27,7 @@
         </form>
     </div>
 </section>
+<div class="separat2">
+</div>
 <?php $content = ob_get_clean(); ?>
 <?php require('template.php'); ?>

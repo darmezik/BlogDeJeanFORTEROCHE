@@ -2,14 +2,14 @@
 <?php ob_start(); ?>
 <div class="separat1">
 </div>
-<section class="fontChapitre"> 
+<section class="fontPage"> 
     <article>
         <h2><?= $post['title'] ?></h2>
         <p><?= $post['content'] ?></p>
     </article>
     <p class="comm">N'hésitez pas à laisser un commentaire</p>
 </section>
-<section class="fontChapitre">
+<section class="fontPage">
     <article>
         <?php
             while ($comment = $comments->fetch())
