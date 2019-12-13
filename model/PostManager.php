@@ -1,6 +1,6 @@
 <?php
 namespace killian\blogDeJeanForteroche\model;
-require_once('Manager.php');
+require_once('model/Manager.php');
 class PostManager extends Manager
 {
     public function getPosts()

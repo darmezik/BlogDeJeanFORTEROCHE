@@ -17,8 +17,9 @@
         }
         $posts->closeCursor();
     ?>
+    <a href="index.php?action=deconnect" class="submit">Déconnexion</a>
 </section>
 <div class="separat2">
 </div>
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/frontend/template.php'); ?>

@@ -21,8 +21,8 @@
             }
         ?>
         <form action="index.php?action=addComment&amp;id=<?= $post['id'] ?>" method="post">
-            <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" value="" /><br />
-            <label for="comment">Commentaire</label> : <input type="text" name="comment" id="comment" /><br />
+            <label for="pseudo">Pseudo</label> : <input type="text" name="pseudo" id="pseudo" value="" required /><br />
+            <label for="comment">Commentaire</label> : <input type="text" name="comment" id="comment" required /><br />
             <label><input type="checkbox" name="valid" required /> Comfirmer le commentaire à laisser</label><br />
             <input type="submit" class="submit" value="Envoyer" />
         </form>

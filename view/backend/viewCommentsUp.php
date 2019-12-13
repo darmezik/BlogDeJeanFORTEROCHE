@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
 <div class="separat1">
 </div>
-<section class="fontPage">
+<section class="fontPage" id="commentUp">
     <article>
         <h2>Commentaires du <?= $post['title'] ?></h2>
         <?php
@@ -20,4 +20,4 @@
 <div class="separat2">
 </div>
 <?php $content = ob_get_clean(); ?>
-<?php require('template.php'); ?>
+<?php require('view/frontend/template.php'); ?>

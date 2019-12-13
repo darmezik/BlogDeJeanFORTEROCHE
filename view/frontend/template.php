@@ -20,7 +20,7 @@
                         <li><a id="defaultLeft" href="index.php?action=home">Accueil</a></li>
                         <li><a href="index.php?action=book">Livre</a></li>
                         <li><a href="index.php?action=contact">Contact</a></li>
-                        <li><a id="defaultRight" href="index.php?action=connect">Connexion</a></li>
+                        <li><a id="defaultRight" href="index.php?action=dashboard">Connexion</a></li>
                     </ul>
                 </nav>
             </div>
@@ -39,7 +39,7 @@
                     <li><a href="index.php?action=home">Accueil</a></li>
                     <li><a href="index.php?action=book">Livre</a></li>
                     <li><a href="index.php?action=contact">Contact</a></li>
-                    <li><a href="#">Connexion</a></li>
+                    <li><a href="index.php?action=dashboard">Connexion</a></li>
                 </ul>
             </nav>
             <p>© 2019 - Tout droits réservés / Site réalisé par Killian D. dans le cadre d'une formation OpenClassrooms</p>

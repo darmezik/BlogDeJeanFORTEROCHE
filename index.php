@@ -32,6 +32,18 @@ try
         }
         elseif($_GET['action'] == 'connect')
         {
+            $UserController->printConnect();
+        }
+        elseif($_GET['action'] == 'testConnect')
+        {
+            $UserController->testConnect();
+        }
+        elseif($_GET['action'] == 'deconnect')
+        {
+            $UserController->deconnect();
+        }
+        elseif($_GET['action'] == 'dashboard')
+        {
             $UserController->printDashboard();
         }
         elseif($_GET['action'] == 'commentsUp')

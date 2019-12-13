@@ -1,20 +1,21 @@
 <?php
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
+require_once('model/ConnectManager.php');
 class UserController
 {
     public function printHome()
     {
         $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
         $post = $postManager->getPost();
-        require('view/viewHome.php');
+        require('view/frontend/viewHome.php');
     }
 
     public function printBook()
     {
         $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
         $posts = $postManager->getPosts();
-        require('view/viewBook.php');
+        require('view/frontend/viewBook.php');
     }
 
     public function printComments()
@@ -23,14 +24,7 @@ class UserController
         $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
         $post = $postManager->getPostId($_GET['id']);
         $comments = $commentManager->getComments($_GET['id']);
-        require('view/viewComments.php');
-    }
-
-    public function printDashboard()
-    {
-        $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
-        $posts = $postManager->getPosts();
-        require('view/viewDashboard.php');
+        require('view/frontend/viewComments.php');
     }
 
     public function printCommentsUp()
@@ -39,7 +33,7 @@ class UserController
         $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
         $comments = $commentManager->getComments($_GET['id']);
         $post = $postManager->getPostId($_GET['id']);
-        require('view/viewCommentsUp.php');
+        require('view/backend/viewCommentsUp.php');
     }
 
     public function deleteComment()
@@ -92,6 +86,58 @@ class UserController
 
     public function printContact()
     {
-        require('view/viewContact.php');
+        require('view/frontend/viewContact.php');
+    }
+
+    public function printConnect()
+    {
+        require('view/frontend/viewConnect.php');
+    }
+
+    public function testConnect()
+    {
+        $connectManager = new \killian\blogDeJeanForteroche\model\ConnectManager();
+        $resultat = $connectManager->verifConnect($_POST['pseudo']);
+        if ($resultat === NULL)
+        {
+            echo 'Mauvais identifiant ou mot de passe';
+        }
+        else
+        {
+            $passwordCorrect = password_verify($_POST['pass'], $resultat['pass']);
+            if($passwordCorrect)
+            {
+                session_start();
+                $_SESSION['pseudo'] = $_POST['pseudo'];
+                header('Location: index.php?action=dashboard');
+            }
+            else
+            {
+                echo 'Mauvais identifiant ou mot de passe';
+            }
+        }
+    }
+
+    public function deconnect()
+    {
+        session_start();
+        $_SESSION = array();
+        session_destroy();
+        header('Location: index.php');
+    }
+
+    public function printDashboard()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $posts = $postManager->getPosts();
+            require('view/backend/viewDashboard.php');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
     }
 }
