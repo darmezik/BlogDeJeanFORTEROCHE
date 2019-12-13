@@ -29,20 +29,36 @@ class UserController
 
     public function printCommentsUp()
     {
-        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-        $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
-        $comments = $commentManager->getComments($_GET['id']);
-        $post = $postManager->getPostId($_GET['id']);
-        require('view/backend/viewCommentsUp.php');
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $comments = $commentManager->getComments($_GET['id']);
+            $post = $postManager->getPostId($_GET['id']);
+            require('view/backend/viewCommentsUp.php');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
     }
 
     public function deleteComment()
     {
-        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-        $reponse = $commentManager->deleteComment($_GET['id']);
-        if($rep === false)
+        session_start();
+        if(isset($_SESSION['pseudo']))
         {
-            throw new Exception('Erreur de suppression du commentaire !');
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+            $reponse = $commentManager->deleteComment($_GET['id']);
+            if($rep === false)
+            {
+                throw new Exception('Erreur de suppression du commentaire !');
+            }
+            else
+            {
+                header('Location: index.php?action=dashboard');
+            }
         }
         else
         {
