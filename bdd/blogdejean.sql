@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  jeu. 12 déc. 2019 à 12:03
+-- Généré le :  ven. 13 déc. 2019 à 11:24
 -- Version du serveur :  10.4.8-MariaDB
 -- Version de PHP :  7.3.11
 
@@ -56,6 +56,13 @@ CREATE TABLE `members` (
   `pseudo` varchar(255) NOT NULL,
   `pass` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Déchargement des données de la table `members`
+--
+
+INSERT INTO `members` (`pseudo`, `pass`) VALUES
+('Admin73', '$2y$10$yXJ6xhzIxfMK0ZzvlY/Nneeem/jJtcPj5toYNSfhgMzJPVPQynmP6');
 
 -- --------------------------------------------------------
 
