@@ -27,7 +27,7 @@
 </div>
 <section class="fontPage" id="fontChapitreHome">
     <article>
-        <h4>Le dernier chapitre de mon livre : <?= $post['title'] ?></h4>
+        <h3>Le dernier chapitre de mon livre : <?= $post['title'] ?></h3>
         <p><?= $post['content'] ?></p>
     </article>
 </section>

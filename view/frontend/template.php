@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <meta charset="utf-8" />
         <title><?= $title ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="public/bootstrap/bootstrap.min.css" rel="stylesheet" />
         <link href="public/css/style.css" rel="stylesheet" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
     <body>
         <header>
             <div id="auteur">
                 <img src="public/images/photoJean.jpg" alt="Jean FORTEROCHE" />
-                <h4>Auteur et écrivain</h4>
+                <h3>Auteur et écrivain</h3>
             </div>
             <div>
                 <h1>Blog de Jean FORTEROCHE</h1>
