@@ -9,7 +9,7 @@
             while ($comment = $comments->fetch())
             {
         ?>
-                <h5><?= htmlspecialchars($comment['pseudo']) ?>  le <?= $comment['commentDateFr'] ?> :</h5>
+                <h3><?= htmlspecialchars($comment['pseudo']) ?>  le <?= $comment['commentDateFr'] ?> :</h3>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>">Supprimer</a>
                 <p><?= htmlspecialchars($comment['comment']) ?></p>
         <?php

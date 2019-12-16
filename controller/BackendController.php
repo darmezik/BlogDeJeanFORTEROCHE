@@ -9,7 +9,9 @@ class BackendController
         if(isset($_SESSION['pseudo']))
         {
             $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
             $posts = $postManager->getPosts();
+            $reportComments = $commentManager->getReportComments();
             require('view/backend/viewDashboard.php');
         }
         else

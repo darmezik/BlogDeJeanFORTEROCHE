@@ -14,6 +14,11 @@ h2
     margin-top: 0;
 }
 
+h3
+{
+    padding-top: 30px;
+}
+
 h5
 {
     margin-top: 0;
@@ -333,12 +338,6 @@ section article form
 {
     padding-top: 20px;
     color: #011C40;
-}
-
-#comment
-{
-    padding-bottom: 80px;
-    padding-right: 80px;
 }
                 /* --- Page Contact --- */
 #formContact h2
