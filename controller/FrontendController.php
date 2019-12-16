@@ -2,7 +2,7 @@
 require_once('model/PostManager.php');
 require_once('model/CommentManager.php');
 require_once('model/ConnectManager.php');
-class UserController
+class FrontendController
 {
     public function printHome()
     {
@@ -27,43 +27,14 @@ class UserController
         require('view/frontend/viewComments.php');
     }
 
-    public function printCommentsUp()
+    public function printContact()
     {
-        session_start();
-        if(isset($_SESSION['pseudo']))
-        {
-            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
-            $comments = $commentManager->getComments($_GET['id']);
-            $post = $postManager->getPostId($_GET['id']);
-            require('view/backend/viewCommentsUp.php');
-        }
-        else
-        {
-            header('Location: index.php?action=connect');
-        }
+        require('view/frontend/viewContact.php');
     }
 
-    public function deleteComment()
+    public function printConnect()
     {
-        session_start();
-        if(isset($_SESSION['pseudo']))
-        {
-            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-            $reponse = $commentManager->deleteComment($_GET['id']);
-            if($rep === false)
-            {
-                throw new Exception('Erreur de suppression du commentaire !');
-            }
-            else
-            {
-                header('Location: index.php?action=dashboard');
-            }
-        }
-        else
-        {
-            header('Location: index.php?action=connect');
-        }
+        require('view/frontend/viewConnect.php');
     }
 
     public function addComment()
@@ -100,16 +71,6 @@ class UserController
         }
     }
 
-    public function printContact()
-    {
-        require('view/frontend/viewContact.php');
-    }
-
-    public function printConnect()
-    {
-        require('view/frontend/viewConnect.php');
-    }
-
     public function testConnect()
     {
         $connectManager = new \killian\blogDeJeanForteroche\model\ConnectManager();
@@ -134,26 +95,10 @@ class UserController
         }
     }
 
-    public function deconnect()
+    public function reportComment()
     {
-        session_start();
-        $_SESSION = array();
-        session_destroy();
-        header('Location: index.php');
-    }
-
-    public function printDashboard()
-    {
-        session_start();
-        if(isset($_SESSION['pseudo']))
-        {
-            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
-            $posts = $postManager->getPosts();
-            require('view/backend/viewDashboard.php');
-        }
-        else
-        {
-            header('Location: index.php?action=connect');
-        }
+        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+        $report = $commentManager->reportComment($_GET['id']);
+        header('Location: index.php?action=book');
     }
 }

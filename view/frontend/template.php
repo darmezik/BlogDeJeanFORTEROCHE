@@ -3,6 +3,7 @@
     <head>
         <title><?= $title ?></title>
         <link href="public/css/style.css" rel="stylesheet" />
+        <link rel="icon" href="public/images/favIcone.png" />
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
     </head>
@@ -16,10 +17,10 @@
                 <h1>Blog de Jean FORTEROCHE</h1>
                 <nav>
                     <ul>
-                        <li><a id="defaultLeft" href="index.php?action=home">Accueil</a></li>
-                        <li><a href="index.php?action=book">Livre</a></li>
-                        <li><a href="index.php?action=contact">Contact</a></li>
-                        <li><a id="defaultRight" href="index.php?action=dashboard">Connexion</a></li>
+                        <li><a id="defaultLeft" href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=home">Accueil</a></li>
+                        <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">Livre</a></li>
+                        <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=contact">Contact</a></li>
+                        <li><a id="defaultRight" href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=dashboard">Connexion</a></li>
                     </ul>
                 </nav>
             </div>
@@ -35,10 +36,10 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="index.php?action=home">Accueil</a></li>
-                    <li><a href="index.php?action=book">Livre</a></li>
-                    <li><a href="index.php?action=contact">Contact</a></li>
-                    <li><a href="index.php?action=dashboard">Connexion</a></li>
+                    <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=home">Accueil</a></li>
+                    <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">Livre</a></li>
+                    <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=contact">Contact</a></li>
+                    <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=dashboard">Connexion</a></li>
                 </ul>
             </nav>
             <p>© 2019 - Tout droits réservés / Site réalisé par Killian D. dans le cadre d'une formation OpenClassrooms</p>

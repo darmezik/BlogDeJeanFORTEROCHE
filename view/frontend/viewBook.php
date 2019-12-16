@@ -12,7 +12,7 @@
         <article>
             <h3><?= $data['title'] ?></h3>
             <p><?= $data['content'] ?></p>
-            <a href="index.php?action=comments&amp;id=<?= $data['id'] ?>">Voir ou écrire un commentaire</a>
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=comments&amp;id=<?= $data['id'] ?>">Voir ou écrire un commentaire</a>
         </article>
     <?php
         }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  ven. 13 déc. 2019 à 11:24
+-- Généré le :  lun. 16 déc. 2019 à 14:48
 -- Version du serveur :  10.4.8-MariaDB
 -- Version de PHP :  7.3.11
 
@@ -33,18 +33,19 @@ CREATE TABLE `comments` (
   `postId` int(11) NOT NULL,
   `pseudo` varchar(255) NOT NULL,
   `comment` text NOT NULL,
-  `commentDate` datetime NOT NULL
+  `commentDate` datetime NOT NULL,
+  `report` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `comments`
 --
 
-INSERT INTO `comments` (`id`, `postId`, `pseudo`, `comment`, `commentDate`) VALUES
-(2, 2, 'kiki73', 'test d\'un 2 ème commentaire', '2019-12-11 08:42:50'),
-(26, 1, 'kiki', 'commentaire 2', '2019-12-12 12:02:40'),
-(27, 1, 'kiki', 'salut', '2019-12-12 12:02:46'),
-(28, 1, 'kiki', 'commentaire 3', '2019-12-12 12:02:50');
+INSERT INTO `comments` (`id`, `postId`, `pseudo`, `comment`, `commentDate`, `report`) VALUES
+(2, 2, 'kiki73', 'test d\'un 2 ème commentaire', '2019-12-11 08:42:50', 0),
+(26, 1, 'kiki', 'commentaire 2', '2019-12-12 12:02:40', 1),
+(29, 1, 'kiki', 'salut', '2019-12-13 11:36:24', 1),
+(30, 1, 'kiki', 'commentaire 3', '2019-12-16 14:44:59', 0);
 
 -- --------------------------------------------------------
 
@@ -108,7 +109,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT pour la table `posts`

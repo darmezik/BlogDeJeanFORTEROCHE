@@ -10,7 +10,7 @@
             {
         ?>
                 <h5><?= htmlspecialchars($comment['pseudo']) ?>  le <?= $comment['commentDateFr'] ?> :</h5>
-                <a href="index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>">Supprimer</a>
+                <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>">Supprimer</a>
                 <p><?= htmlspecialchars($comment['comment']) ?></p>
         <?php
             }

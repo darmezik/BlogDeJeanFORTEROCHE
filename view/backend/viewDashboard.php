@@ -11,13 +11,20 @@
         <article>
             <h3><?= $data['title'] ?></h3>
             <p><?= $data['content'] ?></p>
-            <a href="index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
         </article>
     <?php
         }
         $posts->closeCursor();
     ?>
-    <a href="index.php?action=deconnect" class="submit">Déconnexion</a>
+</section>
+<div class="separat2">
+</div>
+<div class="separat1">
+</div>
+<section class="fontPage">
+    <h2>Commentaires signalés</h2>
+    <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deconnect" class="submit">Déconnexion</a>
 </section>
 <div class="separat2">
 </div>

@@ -1,63 +1,69 @@
 <?php
-require('controller/UserController.php');
-$_GLOBALS["app_url"] = "http://127.0.0.1/BlogDeJeanFORTEROCHE/";
-$UserController = new UserController;
+require('controller/FrontendController.php');
+require('controller/BackendController.php');
+$GLOBALS["app_url"] = "http://127.0.0.1/BlogDeJeanForteroche/";
+$FrontendController = new FrontendController;
+$BackendController = new BackendController;
 try
 {
     if(isset($_GET['action']))
     {
         if($_GET['action'] == '')
         {
-            $UserController->printHome();
+            $FrontendController->printHome();
         }
         elseif($_GET['action'] == 'home')
         {
-            $UserController->printHome();
+            $FrontendController->printHome();
         }
         elseif($_GET['action'] == 'book')
         {
-            $UserController->printBook();
+            $FrontendController->printBook();
         }
         elseif($_GET['action'] == 'comments')
         {
-            $UserController->printComments();
+            $FrontendController->printComments();
         }
         elseif($_GET['action'] == 'addComment')
         {
-            $UserController->addComment();
+            $FrontendController->addComment();
         }
         elseif($_GET['action'] == 'contact')
         {
-            $UserController->printContact();
+            $FrontendController->printContact();
         }
         elseif($_GET['action'] == 'connect')
         {
-            $UserController->printConnect();
+            $FrontendController->printConnect();
         }
         elseif($_GET['action'] == 'testConnect')
         {
-            $UserController->testConnect();
+            $FrontendController->testConnect();
         }
         elseif($_GET['action'] == 'deconnect')
         {
-            $UserController->deconnect();
+            $BackendController->deconnect();
         }
         elseif($_GET['action'] == 'dashboard')
         {
-            $UserController->printDashboard();
+            $BackendController->printDashboard();
         }
         elseif($_GET['action'] == 'commentsUp')
         {
-            $UserController->printCommentsUp();
+            $BackendController->printCommentsUp();
         }
         elseif($_GET['action'] == 'deleteComment')
         {
-            $UserController->deleteComment();
+            $BackendController->deleteComment();
+        }
+        elseif($_GET['action'] == 'reportComment')
+        {
+            $FrontendController->reportComment();
         }
     }
     else
     {
-        $UserController->printHome();
+        $FrontendController->printHome();
     }
 }
 catch(Exception $e)
