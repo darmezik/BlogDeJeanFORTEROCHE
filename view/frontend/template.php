@@ -13,7 +13,7 @@
                 <img src="public/images/photoJean.jpg" alt="Jean FORTEROCHE" />
                 <h3>Auteur et écrivain</h3>
             </div>
-            <div>
+            <div id="menu">
                 <h1>Blog de Jean FORTEROCHE</h1>
                 <nav>
                     <ul>
@@ -29,11 +29,6 @@
                 <?= $content ?>
         </div>
         <footer>
-            <div id="sociaux">
-                <a href="https://www.facebook.com/" target="_blank"><img id="facebook" src="public/images/facebook.png" /></a>
-                <a href="https://twitter.com/" target="_blank"><img id="twitter" src="public/images/twitter.png" /></a>
-                <a href="https://www.instagram.com/" target="_blank"><img id="instagram" src="public/images/instagram.png" /></a>
-            </div>
             <nav>
                 <ul>
                     <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=home">Accueil</a></li>
