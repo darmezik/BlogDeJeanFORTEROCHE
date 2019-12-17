@@ -317,16 +317,33 @@ footer p
     padding: 40px 70px 70px 70px;
 }
 
-.fontPage a
+.book a
 {
+    padding: 5px 25px 5px 25px;
+    margin-left: 9px;
+    margin-right: 9px;
+    background-color: #C7D2D9;
+    border-radius: 10%;
+    border: 1px solid #E4EBF2;
+    box-shadow: 5px 5px 5px #3D90D9;
+    text-decoration: none;
     color: #3D90D9;
+    position: relative;
+    top: 8px;
 }
 
-.fontPage a:hover
+.book a:hover
 {
-    text-decoration: none;
     color: #011C40;
-    text-shadow: 4px 4px 4px black;
+    background-color: rgba(61, 144, 217, 0.1);
+    box-shadow: 2px 2px 2px #C7D2D9;
+    text-decoration: none;
+}
+
+.book a:active
+{
+    border: none;
+    box-shadow: 3px 3px 10px #3D90D9 inset;
 }
                 /* --- Page Livre(comment) --- */
 .comm
@@ -338,6 +355,35 @@ section article form
 {
     padding-top: 20px;
     color: #011C40;
+}
+
+.comments a
+{
+    padding: 5px 25px 5px 25px;
+    margin-left: 9px;
+    margin-right: 9px;
+    background-color: #C7D2D9;
+    border-radius: 10%;
+    border: 1px solid #E4EBF2;
+    box-shadow: 5px 5px 5px #3D90D9;
+    text-decoration: none;
+    color: #3D90D9;
+    position: relative;
+    top: 8px;
+}
+
+.comments a:hover
+{
+    color: #011C40;
+    background-color: rgba(61, 144, 217, 0.1);
+    box-shadow: 2px 2px 2px #C7D2D9;
+    text-decoration: none;
+}
+
+.comments a:active
+{
+    border: none;
+    box-shadow: 3px 3px 10px #3D90D9 inset;
 }
                 /* --- Page Contact --- */
 #formContact h2
@@ -414,6 +460,89 @@ section article form
     padding: 150px 0px 150px 0px;
 }
                 /* --- Pages Administration --- */
+#editorTiny
+{
+    height: 700px;
+}
+
+.formTiny
+{
+    margin: 0px 100px 0px 100px;
+}
+
+.postModif a
+{
+    padding: 5px 25px 5px 25px;
+    margin-left: 9px;
+    margin-right: 9px;
+    background-color: #C7D2D9;
+    border-radius: 10%;
+    border: 1px solid #E4EBF2;
+    box-shadow: 5px 5px 5px #3D90D9;
+    text-decoration: none;
+    color: #3D90D9;
+}
+
+.postModif a:hover
+{
+    color: #011C40;
+    background-color: rgba(61, 144, 217, 0.1);
+    box-shadow: 2px 2px 2px #C7D2D9;
+    text-decoration: none;
+}
+
+.postModif a:active
+{
+    border: none;
+    box-shadow: 3px 3px 10px #3D90D9 inset;
+}
+
+.postModif h3 + a, .postModif h3 + a + a
+{
+    position: relative;
+    bottom: 10px;
+} 
+
+.postModif p + a
+{
+    position: relative;
+    top: 8px;
+}
+
+.commentsSignal a 
+{
+    padding: 5px 25px 5px 25px;
+    margin-left: 9px;
+    margin-right: 9px;
+    background-color: #C7D2D9;
+    border-radius: 10%;
+    border: 1px solid #E4EBF2;
+    box-shadow: 5px 5px 5px #3D90D9;
+    text-decoration: none;
+    color: #3D90D9;
+    position: relative;
+    bottom: 10px;
+}
+
+.commentsSignal a:hover
+{
+    color: #011C40;
+    background-color: rgba(61, 144, 217, 0.1);
+    box-shadow: 2px 2px 2px #C7D2D9;
+    text-decoration: none;
+}
+
+.commentsSignal a:active
+{
+    border: none;
+    box-shadow: 3px 3px 10px #3D90D9 inset;
+}
+
+.deco
+{
+    position: relative;
+    bottom: 30px;
+}
                 /* --- Responsive --- */
 @media all and (max-width: 1200px)
 {
@@ -425,11 +554,6 @@ section article form
 
 @media all and (max-width: 1024px)
 {
-    #headerHome img
-    {
-        height: 500px;
-    }
-
     #fontPresentation img
     {
         height: 200px;
@@ -437,7 +561,7 @@ section article form
 
     #formContact form textarea
     {
-        width: 300px;
+        width: 370px;
     }
 }
 
@@ -530,6 +654,11 @@ section article form
     {
         padding-top: 0;
     }
+
+    #name, #email, #subject
+    {
+        width: 300px;
+    }
 }
 
 @media all and (max-width: 425px)
@@ -595,5 +724,10 @@ section article form
     {
         width: 270px;
         height: 250px;
+    }
+
+    #name, #email, #subject
+    {
+        width: 220px;
     }
 }

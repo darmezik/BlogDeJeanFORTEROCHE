@@ -56,6 +56,14 @@ try
         {
             $BackendController->deleteComment();
         }
+        elseif($_GET['action'] == 'addPost')
+        {
+            $BackendController->addPost();
+        }
+        elseif($_GET['action'] == 'deletePost')
+        {
+            $BackendController->deletePost();
+        }
         elseif($_GET['action'] == 'reportComment')
         {
             $FrontendController->reportComment();

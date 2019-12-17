@@ -3,6 +3,19 @@
 <div class="separat1">
 </div>
 <section class="fontPage">
+    <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deconnect" class="submit deco">Déconnexion</a>
+    <h2>Publier un nouveau Chapitre</h2>
+    <form action="<?php echo($GLOBALS["app_url"]); ?>index.php?action=addPost" method="post" class="formTiny">
+        <label for="title">Titre</label> : <input type="text" name="title" id="title" value="Chapitre " required /><br /> 
+        <textarea type="text" name="content" id="editorTiny"></textarea><br />
+        <input type="submit" class="submit" value="Publier" />
+    </fom>
+</section>
+<div class="separat2">
+</div>
+<div class="separat1">
+</div>
+<section class="fontPage postModif">
     <h2>Mes Chapitres</h2>
     <?php 
         while ($data = $posts->fetch())
@@ -10,6 +23,8 @@
     ?>
         <article>
             <h3><?= $data['title'] ?></h3>
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=&amp;id=<?= $data['id'] ?>">Modifier</a>
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deletePost&amp;id=<?= $data['id'] ?>">Supprimer</a>
             <p><?= $data['content'] ?></p>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
         </article>
@@ -22,7 +37,7 @@
 </div>
 <div class="separat1">
 </div>
-<section class="fontPage">
+<section class="fontPage commentsSignal">
     <h2>Commentaires signalés</h2>
     <article>
         <?php
@@ -37,7 +52,6 @@
             }
         ?>
     </article>
-    <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deconnect" class="submit">Déconnexion</a>
 </section>
 <div class="separat2">
 </div>

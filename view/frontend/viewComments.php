@@ -9,7 +9,7 @@
     </article>
     <p class="comm">N'hésitez pas à laisser un commentaire</p>
 </section>
-<section class="fontPage">
+<section class="fontPage comments">
     <article>
         <?php
             while ($comment = $comments->fetch())

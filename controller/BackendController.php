@@ -59,6 +59,48 @@ class BackendController
         }
     }
 
+    public function addPost()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            if(isset($_POST['title']) && isset($_POST['content']))
+            {
+                $title = $_POST['title'];
+                $content = $_POST['content'];
+                $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+                $post = $postManager->post($title, $content);
+                header('Location: index.php?action=dashboard');
+            }
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
+    public function deletePost()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $delPost = $postManager->deletePost($_GET['id']);
+            if($rep === false)
+            {
+                throw new Exception('Erreur de suppression du chapitre !');
+            }
+            else
+            {
+                header('Location: index.php?action=dashboard');
+            }
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function deconnect()
     {
         session_start();

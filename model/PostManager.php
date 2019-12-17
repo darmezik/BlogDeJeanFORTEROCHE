@@ -27,4 +27,20 @@ class PostManager extends Manager
         $post = $req->fetch();
         return $post;
     }
+
+    public function post($title, $content)
+    {
+        $db = $this->dbConnect();
+        $post = $db->prepare('INSERT INTO posts(title, content) VALUES(?, ?)');
+        $post->execute(array($title, $content));
+        return $post;
+    }
+
+    public function deletePost($id)
+    {
+        $db = $this->dbConnect();
+        $delPost = $db->prepare('DELETE FROM posts WHERE id = ?');
+        $rep = $delPost->execute(array($id));
+        return $rep;
+    }
 }
