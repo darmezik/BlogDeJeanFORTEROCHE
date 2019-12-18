@@ -35,6 +35,14 @@ class CommentManager extends Manager
         return $report;
     }
 
+    public function delReportComment($id)
+    {
+        $db = $this->dbConnect();
+        $delReport = $db->prepare('UPDATE comments SET report = FALSE WHERE id = ?');
+        $delReport->execute(array($id));
+        return $delReport;
+    }
+
     public function getReportComments()
     {
         $db = $this->dbConnect();

@@ -68,6 +68,10 @@ try
         {
             $FrontendController->reportComment();
         }
+        elseif($_GET['action'] == 'delReport')
+        {
+            $BackendController->delReportComment();
+        }
     }
     else
     {

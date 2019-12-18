@@ -2,7 +2,7 @@
 <?php ob_start(); ?>
 <div class="separat1">
 </div>
-<section class="fontPage" id="commentUp">
+<section class="fontPage commentsUp">
     <article>
         <h2>Commentaires du <?= $post['title'] ?></h2>
         <?php

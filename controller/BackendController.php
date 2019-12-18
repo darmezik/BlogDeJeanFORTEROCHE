@@ -101,6 +101,21 @@ class BackendController
         }
     }
 
+    public function delReportComment()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+            $delReport = $commentManager->delReportComment($_GET['id']);
+            header('Location: index.php?action=dashboard');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function deconnect()
     {
         session_start();

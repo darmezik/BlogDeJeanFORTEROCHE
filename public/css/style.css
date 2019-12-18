@@ -470,7 +470,7 @@ section article form
     margin: 0px 100px 0px 100px;
 }
 
-.postModif a
+.postModif a, .commentsSignal a, .commentsUp a
 {
     padding: 5px 25px 5px 25px;
     margin-left: 9px;
@@ -483,7 +483,7 @@ section article form
     color: #3D90D9;
 }
 
-.postModif a:hover
+.postModif a:hover, .commentsSignal a:hover, .commentsUp a:hover
 {
     color: #011C40;
     background-color: rgba(61, 144, 217, 0.1);
@@ -491,7 +491,7 @@ section article form
     text-decoration: none;
 }
 
-.postModif a:active
+.postModif a:active, .commentsSignal a:active, .commentsUp a:active
 {
     border: none;
     box-shadow: 3px 3px 10px #3D90D9 inset;
@@ -509,33 +509,10 @@ section article form
     top: 8px;
 }
 
-.commentsSignal a 
+.commentsSignal a, .commentsUp a
 {
-    padding: 5px 25px 5px 25px;
-    margin-left: 9px;
-    margin-right: 9px;
-    background-color: #C7D2D9;
-    border-radius: 10%;
-    border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
-    text-decoration: none;
-    color: #3D90D9;
     position: relative;
     bottom: 10px;
-}
-
-.commentsSignal a:hover
-{
-    color: #011C40;
-    background-color: rgba(61, 144, 217, 0.1);
-    box-shadow: 2px 2px 2px #C7D2D9;
-    text-decoration: none;
-}
-
-.commentsSignal a:active
-{
-    border: none;
-    box-shadow: 3px 3px 10px #3D90D9 inset;
 }
 
 .deco
