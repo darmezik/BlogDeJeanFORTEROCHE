@@ -116,6 +116,39 @@ class BackendController
         }
     }
 
+    public function printPostUp()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $post = $postManager->getPostId($_GET['id']);
+            require('view/backend/viewPostUp.php');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
+    public function modifPost()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $id = $_GET['id'];
+            $title = $_POST['title'];
+            $content = $_POST['content'];
+            $postManager = new \killian\blogDeJeanForteroche\model\PostManager();
+            $upPost = $postManager->upPost($id, $title, $content);
+            header('Location: index.php?action=dashboard');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function deconnect()
     {
         session_start();

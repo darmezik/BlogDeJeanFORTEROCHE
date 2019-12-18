@@ -23,7 +23,7 @@
     ?>
         <article>
             <h3><?= $data['title'] ?></h3>
-            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=&amp;id=<?= $data['id'] ?>">Modifier</a>
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=postUp&amp;id=<?= $data['id'] ?>">Modifier</a>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deletePost&amp;id=<?= $data['id'] ?>">Supprimer</a>
             <p><?= $data['content'] ?></p>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>

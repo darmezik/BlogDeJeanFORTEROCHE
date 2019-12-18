@@ -64,6 +64,14 @@ try
         {
             $BackendController->deletePost();
         }
+        elseif($_GET['action'] == 'postUp')
+        {
+            $BackendController->printPostUp();
+        }
+        elseif($_GET['action'] == 'modifPost')
+        {
+            $BackendController->modifPost();
+        }
         elseif($_GET['action'] == 'reportComment')
         {
             $FrontendController->reportComment();

@@ -19,11 +19,11 @@ class PostManager extends Manager
         return $post;
     }
 
-    public function getPostId($postId)
+    public function getPostId($id)
     {
         $db = $this->dbConnect();
         $req = $db->prepare('SELECT id, title, content FROM posts WHERE id = ?');
-        $req->execute(array($postId));
+        $req->execute(array($id));
         $post = $req->fetch();
         return $post;
     }
@@ -34,6 +34,17 @@ class PostManager extends Manager
         $post = $db->prepare('INSERT INTO posts(title, content) VALUES(?, ?)');
         $post->execute(array($title, $content));
         return $post;
+    }
+
+    public function upPost($id, $title, $content)
+    {
+        $db = $this->dbConnect();
+        $upPost = $db->prepare('UPDATE posts SET title = :nvtitle, content = :nvcontent WHERE id = :id');
+        $upPost->execute(array(
+            'nvtitle' => $title,
+            'nvcontent' => $content,
+            'id' => $id));
+        return $upPost;
     }
 
     public function deletePost($id)
