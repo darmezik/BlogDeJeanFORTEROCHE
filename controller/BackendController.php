@@ -37,6 +37,21 @@ class BackendController
         }
     }
 
+    public function delReportComment()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+            $delReport = $commentManager->delReportComment($_GET['id']);
+            header('Location: index.php?action=dashboard');
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function deleteComment()
     {
         session_start();
@@ -50,7 +65,7 @@ class BackendController
             }
             else
             {
-                header('Location: index.php?action=dashboard');
+                header('Location: index.php?action=commentsUp&id=' . $_GET['postId']);
             }
         }
         else
@@ -94,21 +109,6 @@ class BackendController
             {
                 header('Location: index.php?action=dashboard');
             }
-        }
-        else
-        {
-            header('Location: index.php?action=connect');
-        }
-    }
-
-    public function delReportComment()
-    {
-        session_start();
-        if(isset($_SESSION['pseudo']))
-        {
-            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-            $delReport = $commentManager->delReportComment($_GET['id']);
-            header('Location: index.php?action=dashboard');
         }
         else
         {

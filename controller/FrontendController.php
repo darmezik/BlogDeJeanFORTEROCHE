@@ -27,16 +27,6 @@ class FrontendController
         require('view/frontend/viewComments.php');
     }
 
-    public function printContact()
-    {
-        require('view/frontend/viewContact.php');
-    }
-
-    public function printConnect()
-    {
-        require('view/frontend/viewConnect.php');
-    }
-
     public function addComment()
     {
         if(isset($_GET['id']) && $_GET['id'] > 0)
@@ -71,6 +61,23 @@ class FrontendController
         }
     }
 
+    public function reportComment()
+    {
+        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+        $report = $commentManager->reportComment($_GET['id']);
+        header('Location: index.php?action=book');
+    }
+
+    public function printContact()
+    {
+        require('view/frontend/viewContact.php');
+    }
+
+    public function printConnect()
+    {
+        require('view/frontend/viewConnect.php');
+    }
+
     public function testConnect()
     {
         $connectManager = new \killian\blogDeJeanForteroche\model\ConnectManager();
@@ -93,12 +100,5 @@ class FrontendController
                 echo 'Mauvais identifiant ou mot de passe';
             }
         }
-    }
-
-    public function reportComment()
-    {
-        $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
-        $report = $commentManager->reportComment($_GET['id']);
-        header('Location: index.php?action=book');
     }
 }
