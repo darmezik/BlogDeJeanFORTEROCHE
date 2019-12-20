@@ -11,7 +11,7 @@
     ?>
         <article>
             <h3><?= $data['title'] ?></h3>
-            <p><?= $data['content'] ?></p>
+            <div><?= $data['content'] ?></div>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=comments&amp;id=<?= $data['id'] ?>">Voir ou écrire un commentaire</a>
         </article>
     <?php

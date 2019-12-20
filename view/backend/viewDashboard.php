@@ -25,7 +25,7 @@
             <h3><?= $data['title'] ?></h3>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=postUp&amp;id=<?= $data['id'] ?>">Modifier</a>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deletePost&amp;id=<?= $data['id'] ?>">Supprimer</a>
-            <p><?= $data['content'] ?></p>
+            <div><?= $data['content'] ?></div>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
         </article>
     <?php
@@ -48,7 +48,7 @@
                 <h4><?= htmlspecialchars($comments['pseudo']) ?>  le <?= $comments['commentDateFr'] ?> :</h4>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=delReport&amp;id=<?= $comments['id'] ?>">Supprimer signalement</a>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deleteComment&amp;id=<?= $comments['id'] ?>">Supprimer</a>
-                <p><?= htmlspecialchars($comments['comment']) ?></p>
+                <div><?= htmlspecialchars($comments['comment']) ?></div>
         <?php
             }
         ?>
