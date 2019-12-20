@@ -33,8 +33,12 @@ p
                     /* En tête (header) */
 header
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    background-image: -o-repeating-linear-gradient(#E4EBF2, #3D90D9);
     background-image: repeating-linear-gradient(#E4EBF2, #3D90D9);
     height: 154px; 
     border-bottom: 1px dotted #E4EBF2;
@@ -42,6 +46,8 @@ header
 
 #auteur
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -59,7 +65,8 @@ header
     height: 130px;
     border-radius: 50%;
     border: 2px solid #3D90D9;
-    box-shadow: 5px 5px 10px #C7D2D9;
+    -webkit-box-shadow: 5px 5px 10px #C7D2D9;
+            box-shadow: 5px 5px 10px #C7D2D9;
     margin: 9px;
 }
 
@@ -67,8 +74,10 @@ header
 {
     height: 137px;
     border-radius: 0% 0% 10% 10%;
+    background: -o-radial-gradient(ellipse, #C7D2D9, transparent);
     background: radial-gradient(ellipse, #C7D2D9, transparent);
-    box-shadow: 1px 5px 0px #3D90D9;
+    -webkit-box-shadow: 1px 5px 0px #3D90D9;
+            box-shadow: 1px 5px 0px #3D90D9;
 }
 
 #menu h1
@@ -82,6 +91,8 @@ header
 
 #menu nav ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style-type: none;
     margin: 0;
@@ -97,7 +108,8 @@ header
     background-color: #C7D2D9;
     border-radius: 10%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
     color: #3D90D9;
 }
@@ -106,14 +118,16 @@ header
 {
     color: #011C40;
     background-color: rgba(61, 144, 217, 0.1);
-    box-shadow: 2px 2px 2px #C7D2D9;
+    -webkit-box-shadow: 2px 2px 2px #C7D2D9;
+            box-shadow: 2px 2px 2px #C7D2D9;
     text-decoration: none;
 }
 
 #menu nav ul li a:active
 {
     border: none;
-    box-shadow: 3px 3px 10px #3D90D9 inset;
+    -webkit-box-shadow: 3px 3px 10px #3D90D9 inset;
+            box-shadow: 3px 3px 10px #3D90D9 inset;
 }
 
 #defaultLeft
@@ -128,6 +142,7 @@ header
                     /* Pied de page (footer) */
 footer
 {
+    background-image: -o-repeating-linear-gradient(#3D90D9, #E4EBF2);
     background-image: repeating-linear-gradient(#3D90D9, #E4EBF2);
     height: 100px;
     border-top: 1px dotted #E4EBF2;
@@ -141,6 +156,8 @@ footer nav
 
 footer nav ul
 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     list-style-type: none;
     padding: 0;
@@ -212,7 +229,8 @@ footer p
     background-color: #C7D2D9;
     border-radius: 5%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
     color: #3D90D9;
     font-size: 1.5em;
@@ -222,14 +240,16 @@ footer p
 {
     color: #011C40;
     background-color: rgb(61, 144, 217);
-    box-shadow: 4px 4px 4px #C7D2D9;
+    -webkit-box-shadow: 4px 4px 4px #C7D2D9;
+            box-shadow: 4px 4px 4px #C7D2D9;
     text-decoration: none;
 }
 
 #headerHome a:active
 {
     border: none;
-    box-shadow: 3px 3px 5px #011C40 inset;
+    -webkit-box-shadow: 3px 3px 5px #011C40 inset;
+            box-shadow: 3px 3px 5px #011C40 inset;
 }
                   /* Page Accueil(presentation) */
 #fontPresentation
@@ -240,8 +260,12 @@ footer p
 .presentation
 {
     padding: 100px 50px 100px 50px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     vertical-align: center;
 }
 
@@ -276,12 +300,16 @@ footer p
 .separat1
 {
     height: 70px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 144, 217, 0.45)), to(rgba(61, 144, 217, 0.6)));
+    background-image: -o-linear-gradient(rgba(61, 144, 217, 0.45), rgba(61, 144, 217, 0.6));
     background-image: linear-gradient(rgba(61, 144, 217, 0.45), rgba(61, 144, 217, 0.6));
 }
 
 .separat2
 {
     height: 15px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(61, 144, 217, 0.6)), to(rgba(61, 144, 217, 0.45)));
+    background-image: -o-linear-gradient(rgba(61, 144, 217, 0.6), rgba(61, 144, 217, 0.45));
     background-image: linear-gradient(rgba(61, 144, 217, 0.6), rgba(61, 144, 217, 0.45));
 }
 
@@ -310,7 +338,8 @@ footer p
 .fontPage article div
 {
     background-color: rgba(61, 144, 217, 0.2);
-    box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
+    -webkit-box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
+            box-shadow: 10px 10px 10px rgba(61, 144, 217, 0.4) inset;
     margin: auto 50px auto 50px;
     line-height: 35px;
     padding: 40px 70px 40px 70px;
@@ -322,7 +351,8 @@ footer p
     background-color: #C7D2D9;
     border-radius: 10%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
     color: #3D90D9;
     position: relative;
@@ -333,14 +363,16 @@ footer p
 {
     color: #011C40;
     background-color: rgba(61, 144, 217, 0.1);
-    box-shadow: 2px 2px 2px #C7D2D9;
+    -webkit-box-shadow: 2px 2px 2px #C7D2D9;
+            box-shadow: 2px 2px 2px #C7D2D9;
     text-decoration: none;
 }
 
 .book a:active
 {
     border: none;
-    box-shadow: 3px 3px 10px #3D90D9 inset;
+    -webkit-box-shadow: 3px 3px 10px #3D90D9 inset;
+            box-shadow: 3px 3px 10px #3D90D9 inset;
 }
                 /* --- Page Livre(comment) --- */
 .comm
@@ -360,7 +392,8 @@ section article form
     background-color: #C7D2D9;
     border-radius: 10%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
     color: #3D90D9;
     position: relative;
@@ -371,14 +404,16 @@ section article form
 {
     color: #011C40;
     background-color: rgba(61, 144, 217, 0.1);
-    box-shadow: 2px 2px 2px #C7D2D9;
+    -webkit-box-shadow: 2px 2px 2px #C7D2D9;
+            box-shadow: 2px 2px 2px #C7D2D9;
     text-decoration: none;
 }
 
 .comments a:active
 {
     border: none;
-    box-shadow: 3px 3px 10px #3D90D9 inset;
+    -webkit-box-shadow: 3px 3px 10px #3D90D9 inset;
+            box-shadow: 3px 3px 10px #3D90D9 inset;
 }
                 /* --- Page Contact --- */
 #formContact h2
@@ -429,7 +464,8 @@ section article form
     padding: 15px 50px;
     border-radius: 5%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     color: #3D90D9;
     text-decoration: none;
     margin: 10px 0px 10px 0px;
@@ -439,7 +475,8 @@ section article form
 {
     color: #011C40;
     background-color: rgb(61, 144, 217);
-    box-shadow: 2px 2px 2px #C7D2D9;
+    -webkit-box-shadow: 2px 2px 2px #C7D2D9;
+            box-shadow: 2px 2px 2px #C7D2D9;
     text-decoration: none;
 }
 
@@ -447,7 +484,8 @@ section article form
 {
     outline: none;
     border: none;
-    box-shadow: 3px 3px 5px #011C40 inset;
+    -webkit-box-shadow: 3px 3px 5px #011C40 inset;
+            box-shadow: 3px 3px 5px #011C40 inset;
 }
                 /* --- Page Contact --- */
 #formConnect
@@ -471,7 +509,8 @@ section article form
     background-color: #C7D2D9;
     border-radius: 10%;
     border: 1px solid #E4EBF2;
-    box-shadow: 5px 5px 5px #3D90D9;
+    -webkit-box-shadow: 5px 5px 5px #3D90D9;
+            box-shadow: 5px 5px 5px #3D90D9;
     text-decoration: none;
     color: #3D90D9;
 }
@@ -480,14 +519,16 @@ section article form
 {
     color: #011C40;
     background-color: rgba(61, 144, 217, 0.1);
-    box-shadow: 2px 2px 2px #C7D2D9;
+    -webkit-box-shadow: 2px 2px 2px #C7D2D9;
+            box-shadow: 2px 2px 2px #C7D2D9;
     text-decoration: none;
 }
 
 .postModif a:active, .commentsSignal a:active, .commentsUp a:active
 {
     border: none;
-    box-shadow: 3px 3px 10px #3D90D9 inset;
+    -webkit-box-shadow: 3px 3px 10px #3D90D9 inset;
+            box-shadow: 3px 3px 10px #3D90D9 inset;
 }
 
 .postModif h3 + a, .postModif h3 + a + a
@@ -544,9 +585,16 @@ section article form
 {
     header
     {
-        flex-direction: column-reverse;
-        justify-content: flex-end;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-pack: end;
+            -ms-flex-pack: end;
+                justify-content: flex-end;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         height: 180px;
     }
 
@@ -569,7 +617,9 @@ section article form
 
     #auteur
     {
-        align-items: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
     }
 
     #auteur h3
@@ -608,8 +658,13 @@ section article form
 
     .presentation
     {
-        flex-direction: column-reverse;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         padding: 40px;
     }
 
@@ -645,11 +700,19 @@ section article form
 {
     #menu
     {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: column;
-        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
         border-radius: 0%;
-        box-shadow: 0px 3px 0px #3D90D9;
+        -webkit-box-shadow: 0px 3px 0px #3D90D9;
+                box-shadow: 0px 3px 0px #3D90D9;
         width: 100%;
     }
 
