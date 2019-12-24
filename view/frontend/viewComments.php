@@ -5,7 +5,7 @@
 <section class="fontPage"> 
     <article>
         <h2><?= $post['title'] ?></h2>
-        <?= $post['content'] ?>
+        <div class="articleContent"><?= $post['content'] ?></div>
         <p class="comm">N'hésitez pas à laisser un commentaire</p>
     </article>
 </section>
@@ -21,7 +21,7 @@
         ?>
             <article>
                 <h4><?= htmlspecialchars($comment['pseudo']) ?> le <?= $comment['commentDateFr'] ?> :</h4>
-                <div><?= htmlspecialchars($comment['comment']) ?></div>
+                <div class="articleContent"><?= htmlspecialchars($comment['comment']) ?></div>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=reportComment&amp;id=<?= $comment['id'] ?>">Signaler</a>
             </article>
         <?php

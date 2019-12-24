@@ -46,7 +46,7 @@ class CommentManager extends Manager
     public function getReportComments()
     {
         $db = $this->dbConnect();
-        $req = $db->query('SELECT id, postId, pseudo, comment, DATE_FORMAT(commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr FROM comments WHERE report = TRUE');
+        $req = $db->query('SELECT c.id, c.postId, c.pseudo, c.comment, DATE_FORMAT(c.commentDate, \'%d/%m/%Y à %Hh%imin%ss\') AS commentDateFr , p.title as postTitle FROM comments c INNER JOIN posts p on c.postId = p.id WHERE report = TRUE');
         return $req;
     }
 }
