@@ -25,7 +25,7 @@
             <h3><?= $data['title'] ?></h3>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=postUp&amp;id=<?= $data['id'] ?>">Modifier</a>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deletePost&amp;id=<?= $data['id'] ?>">Supprimer</a>
-            <div><?= $data['content'] ?></div>
+            <?= $data['content'] ?>
             <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=commentsUp&amp;id=<?= $data['id'] ?>">Voir et gérer les commentaires</a>
         </article>
     <?php

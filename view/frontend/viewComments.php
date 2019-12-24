@@ -5,7 +5,7 @@
 <section class="fontPage"> 
     <article>
         <h2><?= $post['title'] ?></h2>
-        <div><?= $post['content'] ?></div>
+        <?= $post['content'] ?>
         <p class="comm">N'hésitez pas à laisser un commentaire</p>
     </article>
 </section>
