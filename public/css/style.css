@@ -674,11 +674,6 @@ section article form
         width: auto;
     }
 
-    .fontPage article div
-    {
-        padding: 20px 30px 20px 30px;
-    }
-
     #formContact
     {
         padding-top: 0;
@@ -716,10 +711,10 @@ section article form
         width: 100%;
     }
 
-    .fontPage article div
+    .fontPage article div.articleContent
     {
-        padding: 15px 20px 15px 20px;
-        margin: auto 20px auto 20px;
+        margin: auto 10px auto 10px;
+        padding: 20px;
     }
 
     h1
