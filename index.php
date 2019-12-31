@@ -23,9 +23,6 @@ if (isset($_GET['action']))
         case 'reportComment':
             $FrontendController->reportComment();
         break;
-        case 'contact':
-            $FrontendController->printContact();
-        break;
         case 'connect':
             $FrontendController->printConnect();
         break;

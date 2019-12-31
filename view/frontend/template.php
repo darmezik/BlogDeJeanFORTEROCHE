@@ -10,7 +10,6 @@
         <script>
             tinymce.init({
                 selector: '#editorTiny',
-
                 forced_root_block : false,
                 force_br_newlines : true,
                 force_p_newlines : false
@@ -29,7 +28,6 @@
                     <ul>
                         <li><a id="defaultLeft" href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=home">Accueil</a></li>
                         <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">Livre</a></li>
-                        <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=contact">Contact</a></li>
                         <li><a id="defaultRight" href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=dashboard">Connexion</a></li>
                     </ul>
                 </nav>
@@ -43,7 +41,6 @@
                 <ul>
                     <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=home">Accueil</a></li>
                     <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">Livre</a></li>
-                    <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=contact">Contact</a></li>
                     <li><a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=dashboard">Connexion</a></li>
                 </ul>
             </nav>

@@ -103,8 +103,8 @@ header
 #menu nav ul li a
 {
     padding: 5px 25px 5px 25px;
-    margin-left: 9px;
-    margin-right: 9px;
+    margin-left: 30px;
+    margin-right: 30px;
     background-color: #C7D2D9;
     border-radius: 10%;
     border: 1px solid #E4EBF2;
@@ -150,8 +150,8 @@ footer
 
 footer nav
 {
+    width: 185px;
     margin: auto;
-    width: 253.4px;
 }
 
 footer nav ul
@@ -415,48 +415,6 @@ section article form
     -webkit-box-shadow: 3px 3px 10px #3D90D9 inset;
             box-shadow: 3px 3px 10px #3D90D9 inset;
 }
-                /* --- Page Contact --- */
-#formContact h2
-{
-    color: #363844;
-    text-shadow: 10px 10px 15px #363844;
-}
-
-#formContact
-{
-    text-align: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-#name, #email, #subject
-{
-    text-align: center;
-    margin-top: 30px;
-    padding: 15px;
-    width: 450px;
-    border-radius: 5%;
-}
-
-#formContact form textarea
-{
-    resize: none;
-    margin-top: 30px;
-    padding: 15px;
-    width: 850px;
-    height: 250px;
-    border-radius: 2%;
-    border-width: 2px;
-    border-style: inset;
-    border-color: initial;
-}
-
-#name:focus, #email:focus, #subject:focus, #message:focus
-{
-    background: rgba(255, 255, 255, 0.8);
-    outline: none;
-    border: none;
-}
 
 .submit
 {
@@ -486,11 +444,6 @@ section article form
     border: none;
     -webkit-box-shadow: 3px 3px 5px #011C40 inset;
             box-shadow: 3px 3px 5px #011C40 inset;
-}
-                /* --- Page Contact --- */
-#formConnect
-{
-    padding: 150px 0px 150px 0px;
 }
                 /* --- Pages Administration --- */
 #editorTiny
@@ -568,11 +521,6 @@ section article form
     #fontPresentation img
     {
         height: 200px;
-    }
-
-    #formContact form textarea
-    {
-        width: 370px;
     }
 
     .formTiny
@@ -674,11 +622,6 @@ section article form
         width: auto;
     }
 
-    #formContact
-    {
-        padding-top: 0;
-    }
-
     #name, #email, #subject
     {
         width: 300px;
@@ -762,12 +705,6 @@ section article form
     #fontPresentation p
     {
         margin: auto;
-    }
-
-    #formContact form textarea
-    {
-        width: 270px;
-        height: 250px;
     }
 
     #name, #email, #subject

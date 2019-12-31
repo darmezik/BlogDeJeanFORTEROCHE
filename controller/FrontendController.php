@@ -68,11 +68,6 @@ class FrontendController
         header('Location: index.php?action=book');
     }
 
-    public function printContact()
-    {
-        require('view/frontend/viewContact.php');
-    }
-
     public function printConnect()
     {
         require('view/frontend/viewConnect.php');

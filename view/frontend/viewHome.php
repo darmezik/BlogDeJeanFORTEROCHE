@@ -14,9 +14,8 @@
 <section id="fontPresentation">
     <div class="presentation">
         <p>Je m'appelle Jean Forteroche, auteur de Roman mon métier, ma passion.<br /> 
-            Je vis en Bretagne, dont je suis originaire. Vous trouverez sur ce site :<br />
-             - <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">les chapitres de mon nouveau roman</a><br />
-             - <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=contact">une page contact si vous souhaitez me poser des questions complémentaires</a><br />
+            Je vis en Bretagne, dont je suis originaire. Vous trouverez sur ce site<br />
+            <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=book">les chapitres de mon nouveau roman</a><br />
             Bonne visite !!</p>
         <img src="public/images/photoJean.jpg" alt="Jean Forteroche" />
     </div>
