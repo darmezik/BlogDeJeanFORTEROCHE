@@ -718,3 +718,11 @@ section article form
         width: 220px;
     }
 }
+
+@media all and (max-width: 425px)
+{
+    .commentsSignal a 
+    {
+        padding: 5px 20px 5px 20px;
+    }
+}

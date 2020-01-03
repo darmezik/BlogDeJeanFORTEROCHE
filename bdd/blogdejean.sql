@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le :  mar. 31 déc. 2019 à 12:50
+-- Généré le :  ven. 03 jan. 2020 à 10:49
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -42,10 +42,7 @@ CREATE TABLE `comments` (
 --
 
 INSERT INTO `comments` (`id`, `postId`, `pseudo`, `comment`, `commentDate`, `report`) VALUES
-(38, 12, 'kiki', 'Ce chapitre est pas mal', '2019-12-24 09:41:44', 0),
-(39, 12, 'keke', 'Moi je le trouve plutôt vilain', '2019-12-24 09:42:27', 1),
-(40, 13, 'kiki', 'Ce site n\'est pas top top ..\r\nMais le plus important est qu\'il soit fonctionnel', '2019-12-24 09:43:34', 0),
-(41, 13, 'kuy', 'oui oui c\'est nul à ch...', '2019-12-24 15:16:02', 1);
+(40, 13, 'kiki', 'Ce site n\'est pas top top ..\r\nMais le plus important est qu\'il soit fonctionnel', '2019-12-24 09:43:34', 0);
 
 -- --------------------------------------------------------
 
@@ -118,7 +115,7 @@ ALTER TABLE `posts`
 -- AUTO_INCREMENT pour la table `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT pour la table `members`
@@ -130,7 +127,7 @@ ALTER TABLE `members`
 -- AUTO_INCREMENT pour la table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Contraintes pour les tables déchargées
