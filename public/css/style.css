@@ -346,6 +346,11 @@ footer p
     text-align: initial;
 }
 
+.fontPage article div.articleContent.comment
+{
+    text-align: center;
+}
+
 .book a
 {
     padding: 5px 25px 5px 25px;

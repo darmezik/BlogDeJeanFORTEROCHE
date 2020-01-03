@@ -11,7 +11,7 @@
         ?>
                 <h3><?= htmlspecialchars($comment['pseudo']) ?>  le <?= $comment['commentDateFr'] ?> :</h3>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deleteComment&amp;id=<?= $comment['id'] ?>&amp;postId=<?= $post['id'] ?>">Supprimer</a>
-                <div class="articleContent"><?= htmlspecialchars($comment['comment']) ?></div>
+                <div class="articleContent comment"><?= htmlspecialchars($comment['comment']) ?></div>
         <?php
             }
         ?>

@@ -21,7 +21,7 @@
         ?>
             <article>
                 <h4><?= htmlspecialchars($comment['pseudo']) ?> le <?= $comment['commentDateFr'] ?> :</h4>
-                <div class="articleContent"><?= htmlspecialchars($comment['comment']) ?></div>
+                <div class="articleContent comment"><?= htmlspecialchars($comment['comment']) ?></div>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=reportComment&amp;id=<?= $comment['id'] ?>">Signaler</a>
             </article>
         <?php
