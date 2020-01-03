@@ -343,6 +343,7 @@ footer p
     margin: auto 50px auto 50px;
     line-height: 35px;
     padding: 40px 70px 40px 70px;
+    text-align: initial;
 }
 
 .book a

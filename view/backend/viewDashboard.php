@@ -47,7 +47,7 @@
                 <h3>Commentaires <?= $comments['postTitle'] ?></h3>
                 <h4><?= htmlspecialchars($comments['pseudo']) ?>  le <?= $comments['commentDateFr'] ?> :</h4>
                 <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=delReport&amp;id=<?= $comments['id'] ?>">Supprimer signalement</a>
-                <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=deleteComment&amp;id=<?= $comments['id'] ?>">Supprimer</a>
+                <a href="<?php echo($GLOBALS["app_url"]); ?>index.php?action=delCommentReport&amp;id=<?= $comments['id'] ?>">Supprimer</a>
                 <div class="articleContent"><?= htmlspecialchars($comments['comment']) ?></div>
         <?php
             }

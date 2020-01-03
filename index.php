@@ -56,6 +56,9 @@ if (isset($_GET['action']))
         case 'delReport':
             $BackendController->delReportComment();
         break;
+        case 'delCommentReport':
+            $BackendController->deleteCommentReport();
+        break;
         default:
             $FrontendController->printHome();
     }

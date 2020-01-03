@@ -74,6 +74,28 @@ class BackendController
         }
     }
 
+    public function deleteCommentReport()
+    {
+        session_start();
+        if(isset($_SESSION['pseudo']))
+        {
+            $commentManager = new \killian\blogDeJeanForteroche\model\CommentManager();
+            $reponse = $commentManager->deleteComment($_GET['id']);
+            if($rep === false)
+            {
+                throw new Exception('Erreur de suppression du commentaire !');
+            }
+            else
+            {
+                header('Location: index.php?action=dashboard');
+            }
+        }
+        else
+        {
+            header('Location: index.php?action=connect');
+        }
+    }
+
     public function addPost()
     {
         session_start();
